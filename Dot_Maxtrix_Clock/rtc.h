@@ -1,7 +1,5 @@
 #include <Arduino.h>
-
-#include <TimeLib.h>   
-
+#include <TimeLib.h>
 #include <Wire.h>
 #include <Rtc_Pcf8563.h>
 Rtc_Pcf8563 rtc;//初始化实时时钟
@@ -27,10 +25,10 @@ void setRtc() {
 }
 
 char * getFormatDate(){
-  return rtc.formatDate(RTCC_DATE_ASIA);
+  return rtc.formatDate();
 }
 
 char * getFormatTime(){
-  return rtc.formatTime(RTCC_TIME_HMS);
+  return rtc.formatTime();
 }
 

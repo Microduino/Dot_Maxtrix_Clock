@@ -62,7 +62,7 @@ void matrixShow() { //点阵显示内容
   if (millis() - timer[0] > 1000) { //1 second
     if ((timeStatus() != timeNotSet)) {
       //display.clearDisplay();
-      display.setFontMode(MODE_H);
+      //display.setFontMode(MODE_H);
       if (mode) {//显示时间
         display.setColor(0, 255, 255);
         display.setCursor(4, 0);   //x, y
@@ -157,7 +157,7 @@ void bleUpdata() { //蓝牙通讯
     setRtc();
     getRtc();
     display.setColor(0, 255, 0);
-    display.writeString("T.Sync", MODE_H, 20, 0);
+    display.writeString("T.Sync", 50, 1);
     display.clearDisplay();
 
     for (int a = 0; a < buffer_num; a++)
@@ -170,7 +170,7 @@ void bleUpdata() { //蓝牙通讯
     buffer_sta_d = false;
 
     display.clearColor();
-    display.writeString(buffer, MODE_H, 20, 0);
+    display.writeString(buffer, 50, 1);
     display.clearDisplay();
 
     for (int a = 0; a < buffer_num; a++)

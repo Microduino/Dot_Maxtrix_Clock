@@ -1,4 +1,4 @@
-#include <arduino.h>
+#include <Arduino.h>
 
 //#define TIMEZONE  8     // Central European Time
 
